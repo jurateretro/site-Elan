@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+	/*La pseudo-classe :root permet de cibler la racine de l'arbre représentant le document. Pour un document HTML, :root ciblera donc l'élément <html> et aura le même comportement que le sélecteur html mais sa spécificité sera plus forte.*/
+  	--elanOrange: #FFA500; /*use with var(--elanOrange)*/
+  	--elanLightGray: #808080;
+	--elanDarkGray: #515151;
+	--bs-gray: var(--elanLightGray);
+	--bs-secondary: var(--elanLightGray);
+	--bs-dark: var(--elanDarkGray);
+  	--bs-gray-dark: var(--elanDarkGray);
+  	--bs-primary: var(--elanOrange);
+  	--bs-orange: var(--elanOrange);
+  	font-family: 'Exo', sans-serif;
+  	--sectionInterspace : 20px;
+  	--sectionPadding : 10px;	
+}
+
+html{
+    /*box-sizing: border-box;
+    margin: 0;    */
+}
+
+body {
+	background-color: var(--elanLightGray);
+	padding-top: 50px; /* reservation of navbar space */
+
+}
+
+.masthead {
+  height: 100vh;
+  min-height: 500px;
+  background-image: url('../image/batiment1.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height:400px;
+  object-position: left bottom;
+  filter: grayscale(1);
+}
+
+nav {
+    background-color: var(--elanOrange);
+    /*display: inline-block;*/
+}
+
+.navbar a{
+    color: white;
+}
+
+.navbar-brand a{
+    color: white;
+}
+
+
+img{
+    width:100%;
+    height:auto;
+    margin:auto;
+}
+
+a{
+    /*color:white;*/
+    text-decoration: none;   
+}
+
+header{
+    background-color: var(--elanOrange);
+    color: white;
+    margin: 0px;
+    width: 100%;
+}
+
+header>a{
+    color: white;
+}
+
+
+strong{
+    font-size: larger;
+    font-weight: lighter;
+    /* padding: 20px; */
+}
+
+.biggerThanHI{
+    font-size: 400%; 
+}
+
+.biggerThanHII{
+    font-size: 200%;  
+}
+
+.h2Responsive {
+		font-weight: bold;
+	}
+	
+table th,
+table td {
+  		width: 1%; /*balancing table columns*/
+	}	
+		
+@media (max-width: 768px) {
+	.h2Responsive {
+  		
+  		text-align: center;
+	}
+	table th,
+	table td {
+  		font-size: 75%;
+	}
+	
+	.fixed-top{
+		display: inline!important;
+	}
+	.navbar-header{
+		display: inline!important;
+		white-space pre;
+    	max-width: 55%;
+	}
+	.navbar-nav {
+		 display: block;
+ 		 float: left!important;
+ 		 max-width: 45%;
+	}
+	.logo{
+    	width: 15%!important;
+    	min-width: 10%!important;
+    	max-width: 15%!important;
+    	padding-left: 1px;
+    	padding-right: 1px;
+    	padding-bottom: 5px;
+    	object-position: left top;
+	}
+}
+
+
+@media (min-width: 769px) {
+	.h2Responsive {
+  		font-weight: bold;
+  		text-align: left;
+	}
+	table th,
+	table td {
+  		font-size: 100%;
+	}
+	.navbar-header {
+    	float:left;
+	}		
+	.navbar-nav {
+ 		 display: inline-block;
+		 float: right;
+	}
+
+	.navbar-nav>li {
+	 float: left;
+	 /*background-color: yellow;*- /*for debug purpose */
+    display: inline-block;
+    padding-left: var(--sectionPadding);
+	}
+	
+	.navbar-nav>li>a {
+	 /*background-color: blue;*/ /*for debug purpose */
+    float: left;
+    white-space : nowrap;
+	}
+	
+	.logo{
+    width: 15%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    object-position: left top;
+	}
+}
+
+
+.sectionMargin{ 
+	margin: 20px 15px 20px 15px;
+}
+
+.container-padded{
+	padding: var(--sectionInterspace);
+}
+
+.form-control{
+	border-color: var(--elanOrange);
+}
+
+.formations {
+    /* margin: 20px 40px; */
+    padding: var(--sectionPadding);
+    border: yellow dashed 2px;
+    background-color: white;
+}
+
+
+table, th, td {
+   width: 100%;
+   max-width: 100%;
+   border: 1px solid ;
+   border-collapse: collapse; 
+   border-color: var(--elanLightGray);
+   text-align:center;
+   padding: 10px;   
+}
+
+thead{
+    background-color: var(--elanDarkGray) ;
+    color: white;
+}
+
+.equipe{
+    padding: var(--sectionPadding); 
+    background-color: white;
+    border: yellow dashed 2px;
+}
+.equipe div{
+    /*display:flex;*/
+}
+
+.equipe figure{
+    /*margin:1%;*/
+    width:150px;
+    margin: 5px;
+    /*position:relative;*/
+    
+}
+
+.equipeImg{
+	margin: 0px;
+	background-color: blue;
+	width: 100%!important;
+	height 100%!important;
+}
+
+.equipe figcaption{
+    /*position:absolute;*/
+    width:100%;
+    height:15%;
+    text-align:center;
+    background: var(--elanOrange);
+}
+
+.contacter{
+	 padding: var(--sectionPadding);
+    background-color: white;
+    border: yellow dashed 2px;
+}
+.contacter label{
+    width:100%;
+}
+.contacter textarea{
+    width:100%;
+}
+.contacter input{
+    width:100%;
+
+}
+
+input {
+  outline: 0px solid var(--elanOrange);
+  border: 1px solid var(--elanOrange);
+}
+
+textarea {
+  outline: 0px solid var(--elanOrange);
+  border: 1px solid var(--elanOrange);
+}
+
+.btn-primary{
+	background-color: var(--elanOrange);
+	padding-left: 50px;
+	padding-right: 50px;
+	width:50%;
+	min-width: 170px;
+	 }
+	
+.darkBackground{
+	background-color: var(--elanDarkGray);
+}
+
+footer{
+	 /*position: fixed;*/
+	 background-color: var(--elanDarkGray);
+    height: 100px;
+    bottom: 0px;	 
+	 margin-top: calc(2*var(--sectionInterspace));
+	 padding-top: 20px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+
+footer p{
+	font-size: large;
+	line-height: 95%;
+	color: var(--elanLightGray);
+}
+
+footer a{
+	color: var(--elanLightGray);
+}
